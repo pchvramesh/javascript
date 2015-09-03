@@ -1,0 +1,17 @@
+1. What is chaining?
+A. Chaining is also know as cascading. The process of calling one method after another on an object is called as Chaining.
+   Ex: $("#element").fadeOut().html("Chaining").fadeIn();
+
+2. What is an object?
+A. An object is a premitive datatype that is stored as a series of key-value pair.
+
+3. What is a scope?
+A. Scope is the set of variables, functions, objects that has access in a context.
+
+4. Explain Hoisting.
+A. Hosting is the default behaviour in the javascript that moves the declarations to the top.
+
+5. What is Constructor?
+A. It is a function object that creates and initializes objects.
+
+6.
