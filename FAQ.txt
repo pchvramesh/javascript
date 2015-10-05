@@ -1,17 +1,76 @@
-1. What is chaining?
-A. Chaining is also know as cascading. The process of calling one method after another on an object is called as Chaining.
-   Ex: $("#element").fadeOut().html("Chaining").fadeIn();
+1.  What is chaining?
+A.  Chaining is also know as cascading. The process of calling one method after another on an object is called as Chaining.
+    Ex: $("#element").fadeOut().html("Chaining").fadeIn();
 
-2. What is an object?
-A. An object is a premitive datatype that is stored as a series of key-value pair.
+2.  What is an object?
+A.  An object is a premitive datatype that is stored as a series of key-value pair.
 
-3. What is a scope?
-A. Scope is the set of variables, functions, objects that has access in a context.
+3.  What is a scope?
+A.  Scope is the set of variables, functions, objects that has access in a context.
 
-4. Explain Hoisting.
-A. Hosting is the default behaviour in the javascript that moves the declarations to the top.
+4.  Explain Hoisting.
+A.  Hosting is the default behaviour in the javascript that moves the declarations to the top.
 
-5. What is Constructor?
-A. It is a function object that creates and initializes objects.
+5.  What is Constructor?
+A.  It is a function object that creates and initializes objects.
 
-6.
+6.  How to find typeof for Date.
+A.  If you want to find the type of Date the 'typeof' operator returns as object. To find the date type we should use 'instanceof' operator to achieve this.
+    Example:  typeof new Date();
+         --> Object
+             new Date() instanceof Date
+         --> true
+
+7.  What is event Bubbling?
+A.  Event bubbling process starts by executing the event handler defined for idividual elements from the lowest level of DOM hierarchy.
+
+8.  How to Implement a drop down menu to hyperlink to another page?
+A.   <select onchange="if(this.selectedIndex!=0 self.location = this.options[this.selectedIndex].value)">
+        <option value="page1.html">Page 1</option>
+        <option value="page2.html">Page 2</option>
+        <option value="page3.html">Page 3</option>
+        <option value="https://google.com">google.com</option>
+     </select>
+
+     selectedIndex --> Returns the index of the option tag.
+
+9.  How to implement forword and backword navigation in browser?
+A.  Forword Navigation is achieved by
+        history.forword()
+    Backword Navigation is achieved by
+        history.back()
+
+10. How to calculate Random number from given range?
+A.  let A = 1, B = 5
+    The formula would be
+           result =  A + (B-A)* Math.random();
+
+11. How to check cookies are enabled or not?
+A.  To check the cookies enabled in browser or not by setting a non empty cookie and retrieve the same. The it returns the result expected then the cookies are enabled in browser else disabled.
+
+12. How to set cookie in JavaScript?
+A.  To set the cookie from javascript the following code is used.
+
+    function setCookie(name,value,time){
+        var a = new Date(),
+            b = new Date();
+        //Checking time variable for null and 0
+        if(time == null || time == 0){
+            time = 1;
+        }
+
+        b.setTime(a.getTime() + 3600000 * 24 * time);
+        document.cookie = name+"="escape(value)+";expires="+b.toGMTString();
+    }
+
+    escape is a default function used for encoding a string.
+    unescape is a default function used for decoding a string.
+
+13. How to read Cookie in JavaScript?
+A.  To Read the cookie from javascript the following code is used.
+
+    function readCookie(name){
+        var _cookie = " "+document.cookie;
+
+    }
+
